@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { SplashScreen } from '@capacitor/splash-screen'
+import { SplashScreen } from '@capacitor/splash-screen';
+import { PostServiceService } from '../app/post-service.service'
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
-  constructor() {
+  constructor(private postServiceService:PostServiceService ) {
     this.initializeApp();
   }
 
