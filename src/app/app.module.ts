@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
+import { NgChartsModule } from 'ng2-charts';
 
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
@@ -12,9 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule,HttpClientModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
-  
+  imports: [BrowserModule, HttpClientModule, IonicModule.forRoot(), AppRoutingModule],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, NgChartsModule],
+
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
